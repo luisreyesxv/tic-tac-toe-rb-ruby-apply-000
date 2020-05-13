@@ -110,7 +110,7 @@ def play (board)
   player_1 = gets.strip
   greeting(player_1)
   puts" What is Player 2's name?"
-  player_2 = gets.strip"
+  player_2 = gets.strip
   greeting(player_2)
 
 end
