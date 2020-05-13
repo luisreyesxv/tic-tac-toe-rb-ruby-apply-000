@@ -42,7 +42,7 @@ def turn(board)
      puts "move is invalid..."
      turn(board)
   else
-    move(board,index,"X")
+    move(board,index,current_player(turn_count(board)))
     display_board(board)
    end
  end
@@ -105,5 +105,7 @@ end
 
 def play (board)
 
+  turn(board)
+  
 
 end
