@@ -97,3 +97,5 @@ def winner(board)
   board[won?(board)[0]]
   end
 end
+
+puts valid_move?([' ', ' ', ' ', ' ', 'X', ' ', ' ', ' ', ' '],0)
