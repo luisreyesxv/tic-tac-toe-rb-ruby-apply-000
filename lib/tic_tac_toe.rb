@@ -97,3 +97,21 @@ def winner(board)
   board[won?(board)[0]]
   end
 end
+
+def greeting (players_name)
+  puts "Hello #{players_name}!"
+end  
+
+
+def play (board)
+  puts "Welcome to Tic Tac Toe!"
+  display_board(board)
+  puts "What is Player 1's name?"
+  player_1 = gets.strip
+  greeting(player_1)
+  puts" What is Player 2's name?"
+  player_2 = gets.strip"
+  greeting(player_2)
+
+end  
+  
