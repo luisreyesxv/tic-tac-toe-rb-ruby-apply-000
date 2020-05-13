@@ -88,3 +88,8 @@ def turn(board)
  def over?(board)
    won?(board) || full?(board) || draw?(board)
  end
+
+ def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
+end
+
