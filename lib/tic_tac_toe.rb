@@ -55,7 +55,7 @@ def turn(board)
     end
    counter
  end
- 
+
  def current_player(turn)
    if turn_count(turn) % 2 == 0
      player ="X"
@@ -73,19 +73,18 @@ def turn(board)
      win_index_3 = win_combination[2]
      board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] && position_taken?(board,win_index_1)
    end
- 
+
  end
- 
+
  def full?(board)
    board.all? {|board_test|  board_test == "X" || board_test == "O" }
  end
- 
- 
+
+
  def draw? (board)
    !won?(board) && full?(board)
  end
- 
+
  def over?(board)
    won?(board) || full?(board) || draw?(board)
  end
- 
