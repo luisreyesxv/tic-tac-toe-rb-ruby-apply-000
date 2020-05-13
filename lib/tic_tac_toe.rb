@@ -88,3 +88,9 @@ def turn(board)
  def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
+
+def winner(board)
+  if won?(board) != nil
+  board[won?(board)[0]]
+  end
+end
