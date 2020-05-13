@@ -98,4 +98,4 @@ def winner(board)
   end
 end
 
-puts valid_move?([' ', ' ', ' ', ' ', 'X', ' ', ' ', ' ', ' '],0)
+
