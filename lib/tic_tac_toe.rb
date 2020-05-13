@@ -90,7 +90,7 @@ def turn(board)
    won?(board) || full?(board) || draw?(board)
  end
 
- 
+
 
 def winner(board)
   if won?(board) != nil
