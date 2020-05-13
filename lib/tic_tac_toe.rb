@@ -47,14 +47,7 @@ def turn(board)
 end
 
 def turn_count(board)
- counter = 0
- board.each do |space|
-   if space != " "
-     counter +=1
-   end
-
- end
- counter
+ board.count{|game_piece| game_piece == "X" || game_piece =="O"}
 end
 
  def current_player(turn)
