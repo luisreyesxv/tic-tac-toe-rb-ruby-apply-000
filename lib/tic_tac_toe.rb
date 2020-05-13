@@ -43,8 +43,49 @@ def turn(board)
   else
     move(board,index,"X")
     display_board(board)
-
    end
-
-
  end
+
+ def turn_count(board)
+   counter = 0
+   board.each do |space|
+     if space != " "
+       counter +=1
+     end
+    end
+   counter
+ end
+ 
+ def current_player(turn)
+   if turn_count(turn) % 2 == 0
+     player ="X"
+   else
+    player =  "O"
+   end
+   player
+ end
+
+
+ def won? (board)
+   WIN_COMBINATIONS.detect do |win_combination|
+     win_index_1 = win_combination[0]
+     win_index_2 = win_combination[1]
+     win_index_3 = win_combination[2]
+     board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] && position_taken?(board,win_index_1)
+   end
+ 
+ end
+ 
+ def full?(board)
+   board.all? {|board_test|  board_test == "X" || board_test == "O" }
+ end
+ 
+ 
+ def draw? (board)
+   !won?(board) && full?(board)
+ end
+ 
+ def over?(board)
+   won?(board) || full?(board) || draw?(board)
+ end
+ 
