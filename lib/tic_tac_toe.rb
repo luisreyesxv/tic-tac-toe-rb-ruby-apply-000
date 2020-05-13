@@ -100,6 +100,7 @@ def play (board)
 
   while over?(board) != true
     turn(board)
+    over?(board)
    puts  over?(board)
   end
 
