@@ -100,7 +100,7 @@ end
 
 def greeting (players_name)
   puts "Hello #{players_name}!"
-end  
+end
 
 
 def play (board)
@@ -113,5 +113,4 @@ def play (board)
   player_2 = gets.strip"
   greeting(player_2)
 
-end  
-  
+end
